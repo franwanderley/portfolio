@@ -1,0 +1,233 @@
+*{
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background: rgb(1, 191, 189)
+}  
+header{
+   padding-top: 10%;
+   padding-bottom: 2%;
+   width : 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(./../img/FullStack.jpg) center no-repeat;
+   background-size: cover;
+   color: #d6d6d6;
+}
+header h3{
+   font-size: 2rem;
+   font-weight: 500;
+}
+header h1{
+   font-size: 3rem;
+   font-weight: 700;
+   margin: 1% 0;
+}
+header p{
+   font-size: 1rem;
+   text-align:center;
+   margin-bottom: 3%;
+   z-index : 2;
+}
+header a{
+   padding: .5% 1%;
+   background: transparent;
+   text-align: center;
+   text-decoration: none;
+   font-size: 1.5rem;
+   color: #fff;
+   display: flex;
+   border-radius:6%;
+   border: 2px solid #f5f5f5;
+   flex-direction:row;
+   justify-content:center;
+   width : 15%;
+   cursor: pointer;
+   transition: border .3s;
+   transition: all 0.3s ease-in-out;
+}
+header a i{
+   vertical-align: baseline;
+   margin-left: 5%;
+   margin-bottom: 5%;
+}
+header a:hover{
+   border : 2px solid #6558f5
+}
+
+main{
+   background: #f3f3f3;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+}
+main h2{
+   width : 100%;
+   font-size: 2rem;
+   letter-spacing: .2rem;
+   color: #3c3f43;
+   margin : 1% 0;
+   text-align:center;
+}
+main .sobre{
+   width : 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:center;
+   flex-direction: row;
+   background: #e0e0e0;
+   align-items:center;
+   color : #3c3f43;
+   padding: 1% 5%;
+}
+main .sobre h2{
+   width: 100%;
+}
+main .sobre p{
+   font-size: 1rem;
+   width: 60%;
+   color: #3c3f43;
+   text-align:justify
+}
+main .sobre img{
+   width : 90px;
+   height: 90px;
+   border-radius: 50%;
+   align-self: center;
+   margin-right: 5%;
+}
+.projetos{
+   display: block;
+   padding : 1%;
+   width: 30%;
+   margin : 2% 0;
+   border-radius: 6%;
+   box-shadow: 0px 2px 2px 0px #3c3f43;
+   background-color: #fff;
+   text-align: center;
+}
+.projetos img{
+   width : 100%;
+   margin-bottom: 5%;
+}
+.projetos p{
+   margin-bottom: 5%;
+   text-align: left;
+   color: #444;
+}
+.btnprojetos{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   justify-content: space-around;
+}
+.projetos a{
+   text-decoration: none;
+   font-size: 1rem;
+   color: #fff;
+   font-weight: 500;
+   border-radius: 6%;
+   padding: 2% 4%;
+   background: #1aae9f;
+}
+.btnprojetos a:last-child{
+   background: #6558f5;
+}
+.btnprojetos a:first-child:hover, .btnprojetos a:last-child:hover{
+   filter: brightness(.4);
+}
+footer{
+   width: 100%;
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+   padding: 2% 0;
+   padding-bottom: .2%;
+}
+footer h2{
+   font-size: 2rem;
+   letter-spacing: .2rem;
+   margin: 2% 0;
+}
+footer .redessociais{
+   display: flex;
+   margin-bottom: 2%;
+   width: 100%;
+   flex-direction:row;
+   justify-content: center;
+}
+.redessociais a{
+   text-decoration: none;
+   color: #3c3f43;
+   margin:0 2%;
+   transition: color .5s
+}
+.redessociais a:hover{
+   color: #000;
+}
+footer .copy{
+   display: flex;
+   margin-bottom: 2%;
+   flex-direction:column;
+}
+.copy a{
+   text-decoration: none;
+   color: #3c3f43;
+   font-size: 1rem;
+   margin-bottom: 5%;
+   transition: color .5s
+}
+.copy a:hover{
+   color: #000;
+}
+
+@media screen and (max-width : 700px){
+   header h1{
+      font-size: 2rem;
+   }
+   header h3{
+      font-size: 1.5rem;
+   }
+   header a{
+      width : 40%;
+      align-items: center;
+     
+      padding : .2rem .5rem;
+   }
+   main {
+      flex-direction:column;
+      align-items:center;
+      width:100%;
+   }
+   main > h2{
+      letter-spacing: .1rem;
+   }
+   main .sobre {
+      flex-direction: column;
+   }
+
+   main .sobre p{
+      width : 80%;
+      font-size : 1rem;
+   }
+   main .sobre img{
+      width: 80px;
+      height: 80px;
+      margin: 0%;
+      margin-bottom: 5%;
+   }
+   .projetos{
+      width: 90%;
+      margin: 2% 5%;
+   }
+   main .projetos:last-child{
+      margin-bottom: 10%;
+   }
+
+}
