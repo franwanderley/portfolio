@@ -203,6 +203,7 @@ footer .copy{
 @media screen and (max-width : 700px){
    header h1{
       font-size: 2rem;
+      text-align: center;
    }
    header h3{
       font-size: 1.5rem;
@@ -224,7 +225,7 @@ footer .copy{
    }
 
    main .sobre p{
-      width : 80%;
+      width : 90%;
       font-size : 1rem;
    }
    main .sobre img{
@@ -233,6 +234,9 @@ footer .copy{
       margin: 0%;
       margin-bottom: 5%;
    }
+   .allproject{
+      margin: 0 1%;
+   }
    .projetos{
       width: 90%;
       margin: 2% 5%;
@@ -240,5 +244,13 @@ footer .copy{
    main .projetos:last-child{
       margin-bottom: 10%;
    }
-
+}
+@media screen and (max-width : 400px){
+   header h1{
+      font-size: 1.5rem;
+   }
+   header a{
+      width: auto;
+      font-size: 1rem;
+   }
 }
