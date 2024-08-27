@@ -77,7 +77,7 @@ main h2{
    margin : 1% 0;
    text-align:center;
 }
-main .sobre{
+main .about{
    width : 100%;
    display: flex;
    flex-wrap: wrap;
@@ -87,23 +87,23 @@ main .sobre{
    color : #3c3f43;
    padding: 1% 5%;
 }
-main .sobre h2{
+main .about h2{
    width: 100%;
 }
-main .sobre p{
+main .about p{
    font-size: 1rem;
    width: 60%;
    color: #3c3f43;
    text-align:justify
 }
-main .sobre img{
+main .about img{
    width : 90px;
    height: 90px;
    border-radius: 50%;
    align-self: center;
    margin-right: 5%;
 }
-.allproject{
+.all-projects{
    display: flex;
    width: 100%;
    flex-direction: row;
@@ -114,7 +114,7 @@ main .sobre img{
    justify-content: space-around;
    background-color: #f3f3f3;
 }
-.projetos{
+.projects{
    display: block;
    padding : 1%;
    width: 30%;
@@ -124,22 +124,22 @@ main .sobre img{
    background-color: #fff;
    text-align: center;
 }
-.projetos img{
+.projects img{
    width : 100%;
    margin-bottom: 5%;
 }
-.projetos p{
+.projects p{
    margin-bottom: 5%;
    text-align: left;
    color: #444;
 }
-.btnprojetos{
+.btn-projects{
    display: flex;
    flex-direction: row;
    width: 100%;
    justify-content: space-around;
 }
-.projetos a{
+.projects a{
    text-decoration: none;
    font-size: 1rem;
    color: #fff;
@@ -148,10 +148,10 @@ main .sobre img{
    padding: 2% 4%;
    background: #1aae9f;
 }
-.btnprojetos a:last-child{
+.btn-projects a:last-child{
    background: #6558f5;
 }
-.btnprojetos a:first-child:hover, .btnprojetos a:last-child:hover{
+.btn-projects a:first-child:hover, .btn-projects a:last-child:hover{
    filter: brightness(.7);
 }
 footer{
@@ -167,20 +167,20 @@ footer h2{
    letter-spacing: .2rem;
    margin: 2% 0;
 }
-footer .redessociais{
+footer .social-midia{
    display: flex;
    margin-bottom: 2%;
    width: 100%;
    flex-direction:row;
    justify-content: center;
 }
-.redessociais a{
+.social-midia a{
    text-decoration: none;
    color: #3c3f43;
    margin:0 2%;
    transition: color .5s
 }
-.redessociais a:hover{
+.social-midia a:hover{
    color: #000;
 }
 footer .copy{
@@ -220,28 +220,28 @@ footer .copy{
    main > h2{
       letter-spacing: .1rem;
    }
-   main .sobre {
+   main .about {
       flex-direction: column;
    }
 
-   main .sobre p{
+   main .about p{
       width : 90%;
       font-size : 1rem;
    }
-   main .sobre img{
+   main .about img{
       width: 80px;
       height: 80px;
       margin: 0%;
       margin-bottom: 5%;
    }
-   .allproject{
+   .all-projects{
       margin: 0 1%;
    }
-   .projetos{
+   .projects{
       width: 90%;
       margin: 2% 5%;
    }
-   main .projetos:last-child{
+   main .projects:last-child{
       margin-bottom: 10%;
    }
 }
