@@ -5,7 +5,8 @@
    box-sizing: border-box;
 }
 body{
-   background: rgb(1, 191, 189)
+   /* background: rgb(1, 191, 189) */
+   background: #e0e0e0;
 }  
 header{
    padding-top: 10%;
@@ -39,28 +40,32 @@ header a{
    text-align: center;
    text-decoration: none;
    font-size: 1.5rem;
+   white-space: nowrap;
    color: #fff;
    display: flex;
    border-radius:6%;
    border: 2px solid #f5f5f5;
    flex-direction:row;
    justify-content:center;
-   width : 15%;
+   align-items: center;
+   width : 200px;
    cursor: pointer;
    transition: border .3s;
    transition: all 0.3s ease-in-out;
 }
 header a i{
-   vertical-align: baseline;
+   align-self: flex-start;
    margin-left: 5%;
    margin-bottom: 5%;
+}
+header .fa-sort-down:before {
+   vertical-align: text-top;
 }
 header a:hover{
    border : 2px solid #6558f5
 }
 
 main{
-   background: #f3f3f3;
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
@@ -75,72 +80,85 @@ main h2{
    margin : 1% 0;
    text-align:center;
 }
-main .sobre{
+main .about{
    width : 100%;
    display: flex;
    flex-wrap: wrap;
    justify-content:center;
    flex-direction: row;
-   background: #e0e0e0;
    align-items:center;
    color : #3c3f43;
    padding: 1% 5%;
 }
-main .sobre h2{
+main .about h2{
    width: 100%;
 }
-main .sobre p{
+main .about p{
    font-size: 1rem;
    width: 60%;
    color: #3c3f43;
    text-align:justify
 }
-main .sobre img{
+main .about img{
    width : 90px;
    height: 90px;
    border-radius: 50%;
    align-self: center;
    margin-right: 5%;
 }
-.projetos{
+.all-projects{
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   margin: 0 2%;
+   padding: 1%;
+   border-radius: 10px;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   background-color: #f3f3f3;
+}
+.project{
    display: block;
    padding : 1%;
-   width: 30%;
-   margin : 2% 0;
+   width: 350px;
+   margin : 0;
    border-radius: 6%;
    box-shadow: 0px 2px 2px 0px #3c3f43;
    background-color: #fff;
    text-align: center;
 }
-.projetos img{
+.project img{
    width : 100%;
    margin-bottom: 5%;
+   width: -webkit-fill-available;
 }
-.projetos p{
+.project p{
    margin-bottom: 5%;
    text-align: left;
    color: #444;
 }
-.btnprojetos{
+.btn-projects{
    display: flex;
    flex-direction: row;
    width: 100%;
    justify-content: space-around;
 }
-.projetos a{
+.project a{
    text-decoration: none;
    font-size: 1rem;
    color: #fff;
    font-weight: 500;
-   border-radius: 6%;
+   border-radius: 10px;
    padding: 2% 4%;
    background: #1aae9f;
 }
-.btnprojetos a:last-child{
+.btn-projects a:last-child{
    background: #6558f5;
 }
-.btnprojetos a:first-child:hover, .btnprojetos a:last-child:hover{
-   filter: brightness(.4);
+.btn-projects a:first-child:hover, .btn-projects a:last-child:hover{
+   filter: brightness(.7);
 }
 footer{
    width: 100%;
@@ -155,20 +173,20 @@ footer h2{
    letter-spacing: .2rem;
    margin: 2% 0;
 }
-footer .redessociais{
+footer .social-midia{
    display: flex;
    margin-bottom: 2%;
    width: 100%;
    flex-direction:row;
    justify-content: center;
 }
-.redessociais a{
+.social-midia a{
    text-decoration: none;
    color: #3c3f43;
    margin:0 2%;
    transition: color .5s
 }
-.redessociais a:hover{
+.social-midia a:hover{
    color: #000;
 }
 footer .copy{
@@ -181,23 +199,23 @@ footer .copy{
    color: #3c3f43;
    font-size: 1rem;
    margin-bottom: 5%;
-   transition: color .5s
+   transition: color .2s
 }
 .copy a:hover{
    color: #000;
 }
 
+
 @media screen and (max-width : 700px){
    header h1{
       font-size: 2rem;
+      text-align: center;
    }
    header h3{
       font-size: 1.5rem;
    }
    header a{
-      width : 40%;
-      align-items: center;
-     
+      width : 200px;
       padding : .2rem .5rem;
    }
    main {
@@ -208,26 +226,39 @@ footer .copy{
    main > h2{
       letter-spacing: .1rem;
    }
-   main .sobre {
+   main .about {
       flex-direction: column;
    }
 
-   main .sobre p{
-      width : 80%;
+   main .about p{
+      width : 90%;
       font-size : 1rem;
    }
-   main .sobre img{
+   main .about img{
       width: 80px;
       height: 80px;
       margin: 0%;
       margin-bottom: 5%;
    }
-   .projetos{
+   .all-projects{
+      margin: 0 1%;
+      flex-direction: row;
+   }
+   .projects{
       width: 90%;
       margin: 2% 5%;
+      padding: 2%;
    }
-   main .projetos:last-child{
+   main .projects:last-child{
       margin-bottom: 10%;
    }
-
+}
+@media screen and (max-width : 400px){
+   header h1{
+      font-size: 1.5rem;
+   }
+   header a{
+      width: auto;
+      font-size: 1rem;
+   }
 }

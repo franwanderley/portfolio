@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://franwanderley.github.io/portfolio/sitemap.xml
