@@ -1,106 +1,144 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <link rel="icon" href="img/favicon.ico" />
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="preload" >
-   <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
-   
-   <title>Francisco Wanderley | Portfólio de Desenvolvimento FullStack</title>
-   <meta name="description" content="Portfólio profissional de Francisco Wanderley, desenvolvedor front-end. Confira meus projetos em React, NextJs, NodeJS e spring boot.">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Francisco Wanderly</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-      <h3>PORTFOLIO</h3>
-      <h1>FRANCISCO WANDERLY</h1>
-      <p>| Full Stack JavaScript | Java |</p>
-      <a href="#project">Saiba Mais <i class="fas fa-sort-down fa-2x"></i></a>
-   </header>
-   <main>
-      <div class="about">
-         <h2>Sobre</h2>
-         <img src="./img/OK.jpg" alt="Franciso Wanderly">
-         <p>
-            Sou desenvolvedor full stack, trabalhei na zallpy durante dois anos como desenvolvedor fullstack,
-            usando react, Java spring boot, oracle, docker e Scrum, hoje trabalho como freelancer utilizando NodeJs, NestJs e react native
-             faço faculdade de ciencias da computação atualmente estou no 7° periodo.
-         </p>
-      </div>
-      <h2>Alguns dos meus projetos</h2>
-      <div class="all-projects">
-         <div class="project" id="project">
-            <img src="./img/kdminhaoficina.PNG" alt="Resultado da aplicação PlantManager">
-            <p>O site que ajudei a construir enquanto trabalhava na zallpy digital, <br> feito com react, next, java spring boot. </p>
-            <div class="btn-projects">
-               <a target="_blank" href="kdminhaoficina.com">Ver o Resultado <i class="fas fa-laptop"></i></a>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="#" class="nav-brand">FW</a>
+                <ul class="nav-menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="https://www.linkedin.com/in/seu-perfil-aqui" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/seu-usuario-aqui" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
             </div>
-         </div>
-
-         <div class="project">
-            <img src="./img/notebook2.jpg" alt="Resultado da aplicação Clinica São Lucas">
-            <p>Uma landing page responsiva para Clinica São Lucas, feito para obter informações<br> Feito com HTML,CSS e JQUERY</p>
-            <div class="btn-projects">
-               <a target="_blank" href="http://clinicasobral.ga/saolucas">Ver o Resultado <i class="fas fa-laptop"></i></a>
-               <a target="_blank" href="https://github.com/franwanderley/clinicasaolucas">Ver o Codigo <i class="fab fa-github"></i></a>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="./img/OK.jpg" alt="Foto de Francisco Wanderly">
+                </div>
+                <div class="about-text">
+                    <h1>Francisco Wanderly Texeira dos Santos Filho</h1>
+                    <h2>Desenvolvedor Full Stack JavaScript | React | Next.js | Node.js | Java | Spring Boot</h2>
+                    <p>
+                        Desenvolvedor Full Stack com 3 anos de experiência em projetos web, especializado na construção e manutenção de aplicações de ponta a ponta. Possuo sólida vivência no ecossistema JavaScript/TypeScript com React, Next.js e Node.js, e também experiência robusta no desenvolvimento de microsserviços com Java e Spring Boot. Busco aplicar meu conhecimento em arquiteturas escaláveis e boas práticas de desenvolvimento para criar soluções eficientes e de alto impacto em uma nova oportunidade desafiadora.
+                    </p>
+                </div>
             </div>
-         </div>
+        </section>
 
-         <div class="project">
-            <img src="./img/resultado.jpg" alt="Resultado da aplicação APDPRH">
-            <p>Um site para baixar os certificados dos cursos produzidos pela APDP.<br> Feito com Adianti Framework,PHP e MySQL</p>
-            <div class="btn-projects">
-               <a target="_blank" href="http://apdprh-br.org.br/certificados/index.php?class=Login">Ver o Resultado <i class="fas fa-laptop"></i></a>
-               <a target="_blank" href="https://github.com/franwanderley/Apdprh">Ver o Codigo <i class="fab fa-github"></i></a>
+        <section id="experiencia">
+            <div class="container">
+                <h2>Experiência Profissional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Desenvolvedor Full Stack Júnior</h3>
+                            <span class="company">Zallpy Digital</span>
+                            <span class="date">Abril de 2022 - Abril de 2024</span>
+                            <ul>
+                                <li>Atuei no desenvolvimento e manutenção do <a href="kdminhaoficina.com">Kdminhaoficina</a> utilizando React e Next.js no front-end e Java com Spring Boot para a criação e manutenção do back-end.</li>
+                                <li>Colaborei em equipes ágeis para entregar novas funcionalidades, corrigir bugs e melhorar a performance de sistemas críticos.</li>
+                                <li>Fui responsável pelo desenvolvimento de sistemas de back-office robustos, essenciais para a gestão interna e otimização das operações administrativas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Estagiário em Desenvolvimento Full Stack</h3>
+                            <span class="company">Zallpy Digital</span>
+                            <span class="date">Setembro de 2021 - Março de 2022</span>
+                            <ul>
+                                <li>Ofereci suporte ao time de desenvolvimento em tarefas de front-end com React e back-end com Java/Spring Boot.</li>
+                                <li>Desenvolvi componentes de interface e realizei a integração com APIs REST.</li>
+                                <li>Participei de testes unitários e de integração para assegurar a qualidade e a estabilidade das aplicações.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Desenvolvedor Web e Mobile (Freelancer)</h3>
+                             <span class="date">Janeiro de 2021 - Julho de 2021</span>
+                            <ul>
+                                <li>Desenvolvi projetos ponta a ponta para clientes, incluindo aplicações web com React e aplicativos mobile com React Native.</li>
+                                <li>Criei e mantive APIs RESTful utilizando Node.js, express, mongodb para servir as aplicações.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
+        </section>
 
-         <div class="project">
-            <img src="./img/todo.jpg" alt="Simples ToDoList">
-            <p>Um simples ToDOList com tema light/dark e que salvar suas informações. <br> Feito com ReactJS, NextJs e TypeScript</p>
-            <div class="btn-projects">
-               <a target="_blank" href="https://todolist-xi.vercel.app/">Ver o Resultado <i class="fas fa-laptop"></i></a>
-               <a target="_blank" href="https://github.com/franwanderley/ToDoList">Ver o Codigo <i class="fab fa-github"></i></a>
+        <section id="projetos">
+            <div class="container">
+                <h2>Projetos</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="./img/notebook2.jpg" alt="exibindo o site da Clinica São Lucas">
+                        <h3>Site da Clinica São Lucas</h3>
+                        <p>Uma landing page responsiva para Clinica São Lucas, feito para obter informações feito com HTML,CSS e JQUERY</p>
+                        <a href="https://github.com/franwanderley/clinicasaolucas">Ver no GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="./img/resultado.jpg" alt="exibindo o Site para baixar certificado">
+                        <h3>Site para baixar certificado</h3>
+                        <p>Um site para o aluno que fez seu curso na APDPRH possa baixar seu certificado ao acertar as palavras chaves do Curso. Feito com Adianti Framework,PHP e MySQL</p>
+                         <a href="https://github.com/franwanderley/Apdprh">Ver no GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="./img/capture-kanbam.gif" alt="exibindo o site de kanbam">
+                        <h3>Site de kanbam</h3>
+                        <p>Um quadro de tarefas no estilo Kanban para organizar atividades. Desenvolvido com React e TypeScript, implementa a funcionalidade de arrastar e soltar (drag and drop) para mover os cards.</p>
+                        <a href="https://github.com/franwanderley/kanbam">Ver no GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="./img/rifatube.jpg" alt="exibindo o site de rifa online">
+                        <h3>Site de rifa online</h3>
+                        <p>É um site de sorteio de produtos para fins sociais, com pagamento (atualmente está em sandbox). Feito com SQLite3, NodeJS, ReactJS.</p>
+                        <a href="https://github.com/franwanderley/rifatube">Ver no GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="./img/site-de-video.png" alt="exibindo o site de video-aula">
+                        <h3>Site de video-aula</h3>
+                        <p>Um sistema de videos feito no curso Especialização em React || RocketSeat utilizando react, ghaphQL, tailwind, apollo</p>
+                        <a href="https://github.com/franwanderley/ignitelab-react">Ver no GitHub</a>
+                    </div>
+                </div>
             </div>
-         </div>
+        </section>
 
-         <div class="project">
-            <img src="./img/rifatube.jpg" alt="Resultado da aplicação Rifatube">
-            <p>Um site onde o usuario pode participar de um sorteio ou usar um dos seus produtos para o sorteio. <br> Feito com NodeJS, ReactJS e TypeScript</p>
-            <div class="btn-projects">
-               <a target="_blank" href="https://rifatube.herokuapp.com/">Ver o Resultado <i class="fas fa-laptop"></i></a>
-               <a target="_blank" href="https://github.com/franwanderley/rifatube">Ver o Codigo <i class="fab fa-github"></i></a>
+        <section id="contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Vamos conversar! Entre em contato através dos links abaixo.</p>
+                     <div class="social-links">
+                        <a href="mailto:wanderley3101@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/5588996935721" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                     </div>
+                </div>
             </div>
-         </div>
+        </section>
+    </main>
 
-         <div class="project">
-            <img src="./img/moveit.png" alt="Resultado da aplicação Moveit">
-            <p>Um site parecido com o pomodoro só que em vez disso os intervalos são exercírcios <br> Feito com NextJs,ReactJS e TypeScript</p>
-            <div class="btn-projects">
-               <a target="_blank" href="https://moveit-one-iota.vercel.app/">Ver o Resultado <i class="fas fa-laptop"></i></a>
-               <a target="_blank" href="https://github.com/franwanderley/moveit_NLW4">Ver o Codigo <i class="fab fa-github"></i></a>
-            </div>
-         </div>
-      </div>  
-   </main>
-   <footer>
-      <h2>Francisco Wanderly</h2>
-      <div class="social-midia">
-         <a rel="noopener" href="https://www.github.com/franwanderley"> <i class="fab fa-github fa-2x"></i> </a>
-         <a rel="noopener" href="https://www.linkedin.com/in/franwanderley"> <i class="fab fa-linkedin-in fa-2x"></i> </a>
-         <a rel="noopener" href="https://www.behance.net/franwanderley"> <i class="fab fab fa-behance fa-2x"></i> </a>
-      </div>
-      <div class="copy">
-         <a href="mailto:wanderley3101@gmail.com">Created by Francisco Wanderly</a>
-         <p>&copy; Todos os direitos reservados</p>
-      </div>
-   </footer>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - Francisco Wanderly. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
    <!-- Codigo JavaScript -->
-   <script src="https://kit.fontawesome.com/d29111d1c3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d29111d1c3.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
