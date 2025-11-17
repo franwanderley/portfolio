@@ -395,13 +395,13 @@ footer {
     }
 
     /* Desabilita o efeito ::before do hover para itens do menu mobile */
-    .nav-menu a::before {
+    nav .nav-menu a::before {
         display: none;
     }
 
     /* Estilo específico para ícones de redes sociais no menu mobile */
-    .nav-menu li:last-child a,
-    .nav-menu li:nth-last-child(2) a {
+    nav .nav-menu li:last-child a,
+    nav .nav-menu li:nth-last-child(2) a {
         font-size: 2rem;
         padding: 0 10px; 
         display: inline-block;
@@ -409,8 +409,8 @@ footer {
         background-color: transparent;
     }
 
-    .nav-menu li:last-child a:hover,
-    .nav-menu li:nth-last-child(2) a:hover {
+    nav .nav-menu li:last-child a:hover,
+    nav .nav-menu li:nth-last-child(2) a:hover {
         color: var(--text-color);
         background-color: transparent;
     }
