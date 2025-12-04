@@ -396,6 +396,12 @@ section h2::after {
     line-height: 1.6;
 }
 
+.project-card-content div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .project-card a {
     display: inline-block;
     text-decoration: none;
@@ -407,6 +413,13 @@ section h2::after {
 
 .project-card a:hover {
     color: var(--accent-color);
+}
+
+.project-card a.disabled {
+    pointer-events: none; 
+    cursor: default;       
+    color: gray;           
+    text-decoration: none;
 }
 
 /* Contato */
