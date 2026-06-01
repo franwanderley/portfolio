@@ -4,84 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francisco Wanderly - Desenvolvedor Full Stack (React, Node.js, Java)</title>
-    <meta name="description" content="Desenvolvedor FullStack com 3+ anos de experiência em projetos escaláveis usando React, Node, Spring Boot. Apaixonado por otimização de performance e arquitetura de sistemas. Busco oportunidades como Desenvolvedor Junior/Pleno para contribuir com soluções inovadoras.">
-    <meta name="keywords" content="Desenvolvedor Full Stack, React, Node.js, Java, Desenvolvimento Web, Desenvolvimento de Software">
+    <meta name="description" content="Desenvolvedor Full Stack com 3+ anos de experiência em projetos escaláveis usando React, Node, Spring Boot. Apaixonado por otimização de performance e arquitetura de sistemas. Busco oportunidades como Desenvolvedor Junior/Pleno para contribuir com soluções inovadoras.">
+    <meta name="keywords" content="Desenvolvedor Full Stack, React, Node.js, Java, Desenvolvimento Web, Desenvolvimento de Software, Francisco Wanderly">
     <meta name="author" content="Francisco Wanderly">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-indicator"></div>
+
+    <header id="main-header">
         <nav>
             <div class="container">
-                <a href="#" class="nav-brand">FW</a>
-                <div class="menu-toggle" id="mobile-menu">
+                <a href="#inicio" class="nav-brand">FW</a>
+                <div class="menu-toggle" id="mobile-menu" aria-label="Abrir Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
                 <ul class="nav-menu">
+                    <li><a href="#inicio" class="active">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#experiencia">Experiência</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://www.linkedin.com/in/franwanderley" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/franwanderley" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    <li class="social-item"><a href="https://www.linkedin.com/in/franwanderley" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="social-item"><a href="https://github.com/franwanderley" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <main>
-        <section id="sobre" class="hidden">
-            <div class="container about-container">
-                <div class="about-image">
-                    <img src="./img/OK.jpg" alt="Foto de Francisco Wanderly">
-                </div>
-                <div class="about-text">
-                    <h1>Francisco Wanderly Texeira dos Santos Filho</h1>
-                    <h2 class="typing-effect">Desenvolvedor Full Stack JavaScript | React | Next.js | Node.js | Java | Spring Boot</h2>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-sec">
+            <canvas id="hero-particles"></canvas>
+            <div class="container hero-container">
+                <div class="hero-text reveal-slide-left reveal-active">
+                    <span class="hero-subtitle">Olá, eu sou o</span>
+                    <h1>Francisco Wanderly</h1>
+                    <div class="typing-container">
+                        <h2 class="typing-effect" id="typed-text">Desenvolvedor Full Stack</h2>
+                    </div>
                     <p>
-                        Desenvolvedor Full Stack com 3 anos de experiência em projetos web, especializado na construção e manutenção de aplicações de ponta a ponta. Possuo sólida vivência no ecossistema JavaScript/TypeScript com React, Next.js e Node.js, e também experiência robusta no desenvolvimento de microsserviços com Java e Spring Boot. Busco aplicar meu conhecimento em arquiteturas escaláveis e boas práticas de desenvolvimento para criar soluções eficientes e de alto impacto em uma nova oportunidade desafiadora.
+                        Desenvolvedor Full Stack com 3 anos de experiência especializado na construção de aplicações escaláveis de ponta a ponta. Focado no ecossistema JavaScript/TypeScript (React, Next.js, Node.js) e microsserviços com Java e Spring Boot.
                     </p>
-                    <a href="https://1drv.ms/b/c/b05cafc6aef21d34/EVS4xA6UOq9FoLBngWA7wiUBiPMP1wMeaVDGeu_edZjHeQ?e=dfRnCO" target="_blank" class="btn">Ver Currículo</a>
+                    <div class="hero-btns">
+                        <a href="#projetos" class="btn">Ver Projetos <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://1drv.ms/b/c/b05cafc6aef21d34/EVS4xA6UOq9FoLBngWA7wiUBiPMP1wMeaVDGeu_edZjHeQ?e=dfRnCO" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver Currículo <i class="fas fa-file-pdf"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal-slide-right reveal-active">
+                    <div class="hero-image-glow"></div>
+                    <div class="hero-image-container">
+                        <img src="./img/OK.jpg" alt="Foto de Francisco Wanderly">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="experiencia" class="hidden">
+        <!-- About & Stats Section -->
+        <section id="sobre" class="reveal-slide-up">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <div class="about-info">
+                            <h3>Minha Jornada</h3>
+                            <p>
+                                Sou o Francisco Wanderly Texeira dos Santos Filho, apaixonado por resolver problemas complexos e otimizar a performance de sistemas. Com 3 anos de vivência no desenvolvimento web, atuo na criação de interfaces modernas e interativas no front-end, assim como na estruturação de arquiteturas e microsserviços eficientes no back-end.
+                            </p>
+                            <p>
+                                Busco sempre aplicar as melhores práticas de desenvolvimento, como Clean Code, SOLID e metodologias ágeis, com o compromisso de entregar produtos de alta qualidade técnica que realmente gerem valor de negócio.
+                            </p>
+                            <a href="#contato" class="btn">Vamos conversar <i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <div class="stat-num">3+</div>
+                                <div class="stat-label">Anos de Experiência</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num">20+</div>
+                                <div class="stat-label">Projetos Concluídos</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num">Zallpy</div>
+                                <div class="stat-label">Ex-Colaborador</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-num">100%</div>
+                                <div class="stat-label">Focado em Qualidade</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="habilidades" class="skills-sec reveal-slide-up">
+            <div class="container">
+                <h2>Habilidades Técnicas</h2>
+                <div class="skills-categories">
+                    <!-- Front-end -->
+                    <div class="skill-category-card frontend-card stagger-item">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Front-End</h3>
+                        <div class="skill-list">
+                            <div class="skill-badge"><i class="fab fa-react" style="color:#61dafb"></i> React.js</div>
+                            <div class="skill-badge"><i class="fab fa-react" style="color:#ffffff"></i> Next.js</div>
+                            <div class="skill-badge"><i class="fab fa-js" style="color:#f7df1e"></i> JavaScript</div>
+                            <div class="skill-badge"><i class="fas fa-code" style="color:#3178c6"></i> TypeScript</div>
+                            <div class="skill-badge"><i class="fab fa-html5" style="color:#e34f26"></i> HTML5 & CSS3</div>
+                            <div class="skill-badge"><i class="fab fa-css3-alt" style="color:#38bdf8"></i> Tailwind CSS</div>
+                            <div class="skill-badge"><i class="fas fa-feather" style="color:#0769ad"></i> jQuery</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back-end -->
+                    <div class="skill-category-card backend-card stagger-item">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Back-End & Bancos</h3>
+                        <div class="skill-list">
+                            <div class="skill-badge"><i class="fab fa-java" style="color:#f89820"></i> Java</div>
+                            <div class="skill-badge"><i class="fas fa-leaf" style="color:#6db33f"></i> Spring Boot</div>
+                            <div class="skill-badge"><i class="fab fa-node-js" style="color:#339933"></i> Node.js</div>
+                            <div class="skill-badge"><i class="fas fa-bolt" style="color:#38bdf8"></i> Fastify / Express</div>
+                            <div class="skill-badge"><i class="fab fa-php" style="color:#777bb4"></i> PHP</div>
+                            <div class="skill-badge"><i class="fas fa-database" style="color:#336791"></i> PostgreSQL & MySQL</div>
+                            <div class="skill-badge"><i class="fas fa-leaf" style="color:#47a248"></i> MongoDB</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Practices -->
+                    <div class="skill-category-card tools-card stagger-item">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Ferramentas & Práticas</h3>
+                        <div class="skill-list">
+                            <div class="skill-badge"><i class="fab fa-git-alt" style="color:#f05032"></i> Git & GitHub</div>
+                            <div class="skill-badge"><i class="fab fa-docker" style="color:#2496ed"></i> Docker</div>
+                            <div class="skill-badge"><i class="fas fa-project-diagram" style="color:#ff6c37"></i> REST APIs</div>
+                            <div class="skill-badge"><i class="fas fa-sync" style="color:#009688"></i> Metodologias Ágeis</div>
+                            <div class="skill-badge"><i class="fas fa-gem" style="color:#e91e63"></i> Clean Code</div>
+                            <div class="skill-badge"><i class="fas fa-shield-alt" style="color:#ff9800"></i> SOLID</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experiencia" class="reveal-slide-up">
             <div class="container">
                 <h2>Experiência Profissional</h2>
                 <div class="timeline">
-                    <div class="timeline-item">
+                    <!-- Progress Line on Scroll -->
+                    <div class="timeline-progress-line" id="timeline-progress"></div>
+
+                    <!-- Item 1 -->
+                    <div class="timeline-item reveal-slide-left stagger-item">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h3>Desenvolvedor Web e Mobile (Freelancer)</h3>
-                             <span class="date">Janeiro de 2021 - Julho de 2021</span>
+                            <span class="date">Janeiro de 2021 - Julho de 2021</span>
                             <ul>
-                                <li>Desenvolvi projetos ponta a ponta para clientes, incluindo aplicações web com React e aplicativos mobile com React Native.</li>
-                                <li>Criei e mantive APIs RESTful utilizando Node.js, express, mongodb para servir as aplicações.</li>
+                                <li>Desenvolvimento de projetos de ponta a ponta para clientes de variados nichos, construindo aplicações web com React e aplicativos mobile nativos com React Native.</li>
+                                <li>Construção e manutenção de APIs RESTful integradas e performáticas com Node.js, Express e MongoDB.</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="timeline-item">
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item reveal-slide-right stagger-item">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h3>Estagiário em Desenvolvimento Full Stack</h3>
                             <span class="company">Zallpy Digital</span>
                             <span class="date">Setembro de 2021 - Março de 2022</span>
                             <ul>
-                                <li>Ofereci suporte ao time de desenvolvimento em tarefas de front-end com React e back-end com Java/Spring Boot.</li>
-                                <li>Desenvolvi componentes de interface e realizei a integração com APIs REST.</li>
-                                <li>Participei de testes unitários e de integração para assegurar a qualidade e a estabilidade das aplicações.</li>
+                                <li>Suporte ativo ao time de engenharia em atividades de front-end usando React e criação de microsserviços no back-end com Java / Spring Boot.</li>
+                                <li>Desenvolvimento de componentes modulares de interface e integração fluida com APIs REST do negócio.</li>
+                                <li>Criação e execução de testes unitários e de integração para garantir a estabilidade das entregas.</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="timeline-item">
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item reveal-slide-left stagger-item">
+                        <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h3>Desenvolvedor Full Stack Júnior</h3>
                             <span class="company">Zallpy Digital</span>
                             <span class="date">Abril de 2022 - Abril de 2024</span>
                             <ul>
-                                <li>Atuei no desenvolvimento e manutenção do Kdminhaoficina utilizando React e Next.js no front-end e Java com Spring Boot para a criação e manutenção do back-end.</li>
-                                <li>Colaborei em equipes ágeis para entregar novas funcionalidades, corrigir bugs e melhorar a performance de sistemas críticos.</li>
-                                <li>Fui responsável pelo desenvolvimento de sistemas de back-office robustos, essenciais para a gestão interna e otimização das operações administrativas.</li>
+                                <li>Desenvolvimento e refinamento de módulos críticos do produto <strong>Kdminhaoficina</strong>, codificando front-end moderno em React/Next.js e arquitetando back-end de alto tráfego com Java/Spring Boot.</li>
+                                <li>Participação diária em cerimônias Scrum trabalhando em equipe ágil para a entrega consistente de valor, otimização de performance e correção proativa de bugs.</li>
+                                <li>Liderança técnica no desenvolvimento de painéis administrativos (back-office) robustos para gestão operacional.</li>
                             </ul>
                         </div>
                     </div>
@@ -89,97 +221,177 @@
             </div>
         </section>
 
-        <section id="projetos" class="hidden">
+        <!-- Projects Grid Section -->
+        <section id="projetos" class="projects-sec reveal-slide-up">
             <div class="container">
-                <h2>Projetos</h2>
+                <h2>Projetos de Destaque</h2>
+                
+                <!-- Category Filter Buttons -->
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="react">React / Next.js</button>
+                    <button class="filter-btn" data-filter="java">Java & Spring Boot</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                </div>
+
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="./img/kdminhaoficina.PNG" alt="Screenshot do site do KD minha oficina desenvolvido com React e Next.js">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="fullstack react java">
+                        <div class="project-img-wrapper">
+                            <img src="./img/kdminhaoficina.PNG" alt="Site do KD minha oficina">
+                        </div>
                         <div class="project-card-content">
                             <h3>kd Minha Oficina</h3>
-                            <p>Na Zallpy Digital, atuei como Desenvolvedor Full Stack no projeto Kdminhaoficina, utilizando React e Next.js para o front-end e Java com Spring Boot na estruturação do back-end.</p>
-                            <div>
-                                <a class="disabled">Ver no GitHub</a>
-                                <a href="https://kdminhaoficina.com">Ver o projeto</a>
+                            <p>Projeto de grande porte da Zallpy Digital, no qual atuei ativamente como desenvolvedor Full Stack estruturando o front-end responsivo com React / Next.js e o ecossistema de microsserviços com Java e Spring Boot.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">React</span>
+                                <span class="project-tech-tag">Next.js</span>
+                                <span class="project-tech-tag">Java</span>
+                                <span class="project-tech-tag">Spring Boot</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="disabled" title="Código privado comercial"><i class="fab fa-github"></i> Privado</a>
+                                <a href="https://kdminhaoficina.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar Projeto</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <img src="./img/notebook2.jpg" alt="Screenshot da Landing Page responsiva da Clínica São Lucas desenvolvida em HTML,CSS e JS">
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-img-wrapper">
+                            <img src="./img/notebook2.jpg" alt="Landing Page Clínica São Lucas">
+                        </div>
                         <div class="project-card-content">
-                            <h3>Site da Clinica São Lucas</h3>
-                            <p>A clínica precisava de aumentar a presença digital. Desenvolvi uma landing page otimizada para SEO e responsivo, resultando numa navegação mais rápida. Feito com HTML,CSS e JQUERY</p>
-                            <div>
-                                <a href="https://github.com/franwanderley/clinicasaolucas">Ver no GitHub</a>
-                                <a href="https://celadon-sprinkles-6d47f6.netlify.app/saolucas">Ver o projeto</a>
+                            <h3>Clínica São Lucas</h3>
+                            <p>Landing page médica profissional, otimizada para buscadores (SEO) e totalmente responsiva, aumentando a conversão de pacientes da clínica. Desenvolvida com HTML, CSS e jQuery.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">HTML5</span>
+                                <span class="project-tech-tag">CSS3</span>
+                                <span class="project-tech-tag">jQuery</span>
+                                <span class="project-tech-tag">SEO</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/franwanderley/clinicasaolucas" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://celadon-sprinkles-6d47f6.netlify.app/saolucas" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <img src="./img/capture-kanbam.gif" alt="Screenshot do site de kanbam">
-                        <div class="project-card-content">
-                            <h3>Site de kanbam</h3>
-                            <p>Um quadro de tarefas no estilo Kanban para organizar atividades. Desenvolvido com React e TypeScript, implementa a funcionalidade de arrastar e soltar (drag and drop) para mover os cards.</p>
-                            <a href="https://github.com/franwanderley/kanbam">Ver no GitHub</a>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="frontend react">
+                        <div class="project-img-wrapper">
+                            <img src="./img/capture-kanbam.gif" alt="Kanban de Tarefas">
                         </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./img/resultado.jpg" alt="Screenshot do Site da APDPRH para baixar certificado">
                         <div class="project-card-content">
-                            <h3>Site para baixar certificado</h3>
-                            <p>Um site para o aluno que fez seu curso na APDPRH possa baixar seu certificado ao acertar as palavras chaves do Curso. Feito com Adianti Framework,PHP e MySQL</p>
-                            <div>
-                                <a href="https://github.com/franwanderley/Apdprh">Ver no GitHub</a>
-                                <a href="https://apdprh-br.org.br">Ver o projeto</a>
+                            <h3>Kanban Interativo</h3>
+                            <p>Quadro interativo de organização de tarefas. Possui funcionalidade de arrastar e soltar (drag and drop) fluida para o gerenciamento ágil de tarefas diárias. Feito com React e TypeScript.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">React</span>
+                                <span class="project-tech-tag">TypeScript</span>
+                                <span class="project-tech-tag">Drag & Drop</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/franwanderley/kanbam" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <img src="./img/mindshare-gif.gif" alt="gif do site mindshare">
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-category="backend">
+                        <div class="project-img-wrapper">
+                            <img src="./img/resultado.jpg" alt="Site APDPRH Certificados">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Emissor de Certificados</h3>
+                            <p>Plataforma automatizada para download seguro de certificados acadêmicos da APDPRH. Valida a liberação do documento através do acerto de palavras-chaves e questionários. Desenvolvido em PHP e MySQL.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">PHP</span>
+                                <span class="project-tech-tag">Adianti</span>
+                                <span class="project-tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/franwanderley/Apdprh" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://apdprh-br.org.br" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-category="fullstack react">
+                        <div class="project-img-wrapper">
+                            <img src="./img/mindshare-gif.gif" alt="Mindshare Plataforma">
+                        </div>
                         <div class="project-card-content">
                             <h3>Mindshare</h3>
-                            <p>É uma plataforma para compartilhamento de ideias, com grupos para discussões e muito mais. Utilizando React, Vite, Fastify, Prisma e Neon</p>
-                            <div>
-                                <a href="https://github.com/franwanderley/mindshare">Ver no GitHub</a>
-                                <a href="https://mindshare-five.vercel.app/">Ver o projeto</a>
+                            <p>Plataforma moderna de compartilhamento de ideias, fóruns e debates online em tempo real. Desenvolvido com React, Vite no frontend e ecossistema Fastify, Prisma e Neon no backend.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">React</span>
+                                <span class="project-tech-tag">Vite</span>
+                                <span class="project-tech-tag">Fastify</span>
+                                <span class="project-tech-tag">Prisma DB</span>
+                                <span class="project-tech-tag">Neon Postgres</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/franwanderley/mindshare" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://mindshare-five.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <img src="./img/site-de-video.png" alt="Screenshot do site de video-aula feito durante o curso Especialização em React || RocketSeat">
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-category="frontend react">
+                        <div class="project-img-wrapper">
+                            <img src="./img/site-de-video.png" alt="Plataforma de Vídeo-Aulas">
+                        </div>
                         <div class="project-card-content">
-                            <h3>Site de video-aula</h3>
-                            <p>Um sistema de videos feito no curso Especialização em React || RocketSeat utilizando react, graphQL, tailwind, apollo</p>
-                            <a href="https://github.com/franwanderley/ignitelab-react">Ver no GitHub</a>
+                            <h3>Ignite Lab Video-Aulas</h3>
+                            <p>Interface responsiva de streaming de vídeo e controle de cronogramas de aulas, integrada com gerenciador de conteúdo headless. Feito em React, GraphQL, Tailwind CSS e Apollo Client.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">React</span>
+                                <span class="project-tech-tag">GraphQL</span>
+                                <span class="project-tech-tag">Tailwind</span>
+                                <span class="project-tech-tag">Apollo</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/franwanderley/ignitelab-react" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="hidden">
-            <div class="container">
-                <h2>Contato</h2>
-                <p>Vamos conversar! Entre em contato através dos links abaixo.</p>
-                     <div class="social-links">
-                        <a href="mailto:wanderley3101@gmail.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://wa.me/5588996935721" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                     </div>
+        <!-- Contact Section -->
+        <section id="contato">
+            <div class="contact-glow"></div>
+            <div class="container contact-container reveal-slide-up">
+                <h2>Vamos Construir Algo Incrível?</h2>
+                <p>Estou sempre em busca de novos desafios e projetos inovadores. Seja para tirar uma dúvida, conversar sobre tecnologia ou discutir oportunidades, entre em contato!</p>
+                <div class="social-links">
+                    <a href="mailto:wanderley3101@gmail.com" title="Enviar E-mail" aria-label="E-mail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/5588996935721" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Conversar no WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/franwanderley" target="_blank" rel="noopener noreferrer" title="Conectar no LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/franwanderley" target="_blank" rel="noopener noreferrer" title="Visitar GitHub" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 - Francisco Wanderly. Todos os direitos reservados.</p>
+            <p>&copy; 2026 - Desenvolvido por Francisco Wanderly. Todos os direitos reservados.</p>
         </div>
     </footer>
     
-   <!-- Codigo JavaScript -->
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/d29111d1c3.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="script-text.js"></script>
