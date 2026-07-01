@@ -6,19 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollIndicator = document.getElementById("scroll-indicator");
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-menu a");
-  
+
   let lastScrollY = window.scrollY;
-  
+
   window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
-    
+
     // Update scroll progress indicator
-    const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const totalScroll =
+      document.documentElement.scrollHeight - window.innerHeight;
     if (totalScroll > 0) {
       const scrollPercent = (currentScrollY / totalScroll) * 100;
       scrollIndicator.style.width = `${scrollPercent}%`;
     }
-    
+
     // Smart Header behavior (hide on scroll down, show on scroll up)
     if (currentScrollY > 100) {
       header.classList.add("nav-scrolled");
@@ -31,19 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("nav-scrolled");
       header.classList.remove("nav-hidden");
     }
-    
+
     lastScrollY = currentScrollY;
-    
+
     // Highlight Active Link in Navbar on scroll
     let currentActiveSectionId = "";
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 120;
       const sectionHeight = section.offsetHeight;
-      if (currentScrollY >= sectionTop && currentScrollY < sectionTop + sectionHeight) {
+      if (
+        currentScrollY >= sectionTop &&
+        currentScrollY < sectionTop + sectionHeight
+      ) {
         currentActiveSectionId = section.getAttribute("id");
       }
     });
-    
+
     if (currentActiveSectionId) {
       navLinks.forEach((link) => {
         link.classList.remove("active");
@@ -52,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
-    
+
     // Specific Timeline Scroll Animation
     animateTimelineProgress();
   });
@@ -97,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, observerOptions);
 
   const hiddenElements = document.querySelectorAll(
-    ".reveal-slide-up, .reveal-slide-left, .reveal-slide-right, .reveal-fade"
+    ".reveal-slide-up, .reveal-slide-left, .reveal-slide-right, .reveal-fade",
   );
   hiddenElements.forEach((el) => observer.observe(el));
 
@@ -109,26 +113,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const timelineContainer = document.querySelector(".timeline");
 
   function animateTimelineProgress() {
-    if (!timelineProgress || !timelineContainer || timelineItems.length === 0) return;
-    
+    if (!timelineProgress || !timelineContainer || timelineItems.length === 0)
+      return;
+
     const triggerOffset = window.innerHeight * 0.7; // Animate when line passes 70% of screen height
     const containerRect = timelineContainer.getBoundingClientRect();
     const containerTop = containerRect.top + window.scrollY;
     const containerHeight = containerRect.height;
-    
+
     // Scroll progress through timeline container
-    const scrollFromContainerTop = (window.scrollY + triggerOffset) - containerTop;
+    const scrollFromContainerTop =
+      window.scrollY + triggerOffset - containerTop;
     let progressPercent = (scrollFromContainerTop / containerHeight) * 100;
-    
+
     // Clamp between 0% and 100%
     progressPercent = Math.max(0, Math.min(100, progressPercent));
     timelineProgress.style.height = `${progressPercent}%`;
-    
+
     // Highlight timeline dots as scroll passes them
     timelineItems.forEach((item) => {
       const itemRect = item.getBoundingClientRect();
       const dotTop = itemRect.top + window.scrollY;
-      
+
       if (window.scrollY + triggerOffset >= dotTop) {
         item.classList.add("active-dot");
       } else {
@@ -153,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       projectCards.forEach((card) => {
         const cardCategories = card.getAttribute("data-category").split(" ");
-        
+
         // Hide card with smooth scale & fade transition
         if (filterValue === "all" || cardCategories.includes(filterValue)) {
           card.style.display = "flex";
@@ -179,13 +185,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (canvas) {
     const ctx = canvas.getContext("2d");
     let particlesArray = [];
-    let animationFrameId;
 
     // Mouse coordinates
     let mouse = {
       x: null,
       y: null,
-      radius: 120 // Interaction radius
+      radius: 120, // Interaction radius
     };
 
     window.addEventListener("mousemove", (event) => {
@@ -206,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
       initParticles();
     }
     window.addEventListener("resize", resizeCanvas);
-    
+
     // Set initial size
     canvas.width = canvas.parentElement.offsetWidth;
     canvas.height = canvas.parentElement.offsetHeight;
@@ -272,23 +277,29 @@ document.addEventListener("DOMContentLoaded", () => {
     function initParticles() {
       particlesArray = [];
       // Dynamic particle count based on canvas width
-      const numberOfParticles = Math.min(70, Math.floor((canvas.width * canvas.height) / 12000));
-      
+      const numberOfParticles = Math.min(
+        70,
+        Math.floor((canvas.width * canvas.height) / 12000),
+      );
+
       const particleColors = [
         "rgba(139, 92, 246, 0.25)", // Violet glow
-        "rgba(6, 182, 212, 0.25)",  // Cyan glow
-        "rgba(59, 130, 246, 0.2)"    // Blue glow
+        "rgba(6, 182, 212, 0.25)", // Cyan glow
+        "rgba(59, 130, 246, 0.2)", // Blue glow
       ];
 
       for (let i = 0; i < numberOfParticles; i++) {
         let size = Math.random() * 2.5 + 1;
         let x = Math.random() * (canvas.width - size * 2) + size;
         let y = Math.random() * (canvas.height - size * 2) + size;
-        let directionX = (Math.random() * 0.6) - 0.3;
-        let directionY = (Math.random() * 0.6) - 0.3;
-        let color = particleColors[Math.floor(Math.random() * particleColors.length)];
+        let directionX = Math.random() * 0.6 - 0.3;
+        let directionY = Math.random() * 0.6 - 0.3;
+        let color =
+          particleColors[Math.floor(Math.random() * particleColors.length)];
 
-        particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+        particlesArray.push(
+          new Particle(x, y, directionX, directionY, size, color),
+        );
       }
     }
 
@@ -303,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (distance < maxDistance) {
             // Faint opacity based on distance
-            let opacity = (1 - (distance / maxDistance)) * 0.12;
+            let opacity = (1 - distance / maxDistance) * 0.12;
             ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
             ctx.lineWidth = 0.8;
             ctx.beginPath();
@@ -318,11 +329,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Animation Loop
     function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
       }
-      
+
       connectParticles();
       animationFrameId = requestAnimationFrame(animateParticles);
     }
