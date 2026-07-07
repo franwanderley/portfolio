@@ -13,8 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image" href="./img/OK.webp" type="image/webp" fetchpriority="high">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/d29111d1c3.js" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+    <script src="script-text.js" defer></script>
 </head>
 <body>
     <!-- Scroll Progress Indicator -->
@@ -64,7 +72,7 @@
                 <div class="hero-image-wrapper reveal-slide-right reveal-active">
                     <div class="hero-image-glow"></div>
                     <div class="hero-image-container">
-                        <img src="./img/OK.jpg" alt="Foto de Francisco Wanderly">
+                        <img src="./img/OK.webp" alt="Foto de Francisco Wanderly" width="320" height="320" fetchpriority="high">
                     </div>
                 </div>
             </div>
@@ -238,7 +246,7 @@
                     <!-- Project 1 -->
                     <div class="project-card" data-category="fullstack react java">
                         <div class="project-img-wrapper">
-                            <img src="./img/kdminhaoficina.PNG" alt="Site do KD minha oficina">
+                            <img src="./img/kdminhaoficina.webp" alt="Site do KD minha oficina" width="800" height="405" loading="lazy">
                         </div>
                         <div class="project-card-content">
                             <h3>kd Minha Oficina</h3>
@@ -259,7 +267,7 @@
                     <!-- Project 2 -->
                      <div class="project-card" data-category="frontend react">
                         <div class="project-img-wrapper">
-                            <img src="./img/6a3.gif" alt="Jogo de simulação de partidas de futebol">
+                            <img src="./img/6a3.webp" alt="Jogo de simulação de partidas de futebol" width="400" height="213" loading="lazy">
                         </div>
                         <div class="project-card-content">
                             <h3>🏆 6 a 3 | Simulador da Copa Libertadores</h3>
@@ -281,7 +289,7 @@
                     <!-- Project 3 -->
                     <div class="project-card" data-category="frontend react">
                         <div class="project-img-wrapper">
-                            <img src="./img/capture-kanbam.gif" alt="Kanban de Tarefas">
+                            <img src="./img/capture-kanbam.webp" alt="Kanban de Tarefas" width="800" height="405" loading="lazy">
                         </div>
                         <div class="project-card-content">
                             <h3>Kanban Interativo</h3>
@@ -300,7 +308,7 @@
                     <!-- Project 4 -->
                     <div class="project-card" data-category="backend">
                         <div class="project-img-wrapper">
-                            <img src="./img/resultado.jpg" alt="Site APDPRH Certificados">
+                            <img src="./img/resultado.webp" alt="Site APDPRH Certificados" width="800" height="450" loading="lazy">
                         </div>
                         <div class="project-card-content">
                             <h3>Emissor de Certificados</h3>
@@ -320,7 +328,7 @@
                     <!-- Project 5 -->
                     <div class="project-card" data-category="fullstack react">
                         <div class="project-img-wrapper">
-                            <img src="./img/mindshare-gif.gif" alt="Mindshare Plataforma">
+                            <img src="./img/mindshare-gif.webp" alt="Mindshare Plataforma" width="800" height="407" loading="lazy">
                         </div>
                         <div class="project-card-content">
                             <h3>Mindshare</h3>
@@ -342,7 +350,7 @@
                     <!-- Project 6 -->
                     <div class="project-card" data-category="frontend">
                         <div class="project-img-wrapper">
-                            <img src="./img/notebook2.jpg" alt="Landing Page Clínica São Lucas">
+                            <img src="./img/notebook2.webp" alt="Landing Page Clínica São Lucas" width="800" height="364" loading="lazy">
                         </div>
                         <div class="project-card-content">
                             <h3>Clínica São Lucas</h3>
@@ -392,10 +400,5 @@
             <p>&copy; 2026 - Desenvolvido por Francisco Wanderly. Todos os direitos reservados.</p>
         </div>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/d29111d1c3.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="script-text.js"></script>
 </body>
 </html>
