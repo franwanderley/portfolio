@@ -17,7 +17,7 @@
     
     --text-primary: #f8fafc;  /* Slate 50 */
     --text-secondary: #94a3b8;/* Slate 400 */
-    --text-muted: #64748b;    /* Slate 500 */
+    --text-muted: #7c8ba1;    /* Slate 450 (Optimized for contrast > 4.5:1 on surface-dark) */
     
     --border-color: rgba(255, 255, 255, 0.05);
     --border-hover: rgba(255, 255, 255, 0.12);
@@ -240,21 +240,19 @@ main {
 }
 
 section {
-    padding: 100px 0;
+    padding: clamp(4rem, 8vw, 8rem) 0;
     position: relative;
 }
 
 section h2 {
     font-family: var(--font-heading);
     text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.75rem;
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 5vw, 2.75rem);
     font-weight: 800;
-    letter-spacing: -0.5px;
-    background: linear-gradient(135deg, var(--text-primary) 30%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    text-wrap: balance;
 }
 
 /* Buttons */
@@ -339,15 +337,13 @@ section h2 {
 
 .hero-text h1 {
     font-family: var(--font-heading);
-    font-size: 4rem;
-    line-height: 1.1;
+    font-size: clamp(2.25rem, 7vw, 4.25rem);
+    line-height: 1.15;
     font-weight: 900;
-    letter-spacing: -1.5px;
-    margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--text-primary) 50%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    text-wrap: balance;
 }
 
 .typing-container {
@@ -402,8 +398,9 @@ section h2 {
 
 .hero-image-container {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     padding: 5px;
     background: linear-gradient(135deg, var(--primary) 0%, transparent 40%, var(--secondary) 100%);
@@ -413,6 +410,7 @@ section h2 {
 }
 
 .hero-image-container img {
+    display: block;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -471,12 +469,9 @@ section h2 {
 
 .stat-num {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--secondary);
     margin-bottom: 4px;
 }
 
@@ -495,7 +490,7 @@ section h2 {
 
 .skills-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 24px;
     margin-top: 40px;
 }
@@ -793,7 +788,7 @@ section h2 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 30px;
 }
 
@@ -1056,10 +1051,6 @@ footer p {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    section h2 {
-        font-size: 2.25rem;
-    }
-    
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1071,10 +1062,6 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
-    .hero-text h1 {
-        font-size: 3.25rem;
     }
     
     .typing-container {
@@ -1182,41 +1169,16 @@ footer p {
         margin-top: 20px;
     }
     
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    
     .hero-text h2.typing-effect {
         font-size: 1.25rem;
-    }
-    
-    .hero-image-container {
-        width: 260px;
-        height: 260px;
     }
     
     .stat-card {
         padding: 16px;
     }
-    
-    .stat-num {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 480px) {
-    section {
-        padding: 70px 0;
-    }
-    
-    section h2 {
-        font-size: 1.85rem;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.15rem;
-    }
-    
     .hero-btns {
         flex-direction: column;
         width: 100%;
@@ -1229,5 +1191,39 @@ footer p {
     
     .about-stats {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Safe Area Insets for modern devices */
+body {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Coarse pointer styles for touch targets */
+@media (pointer: coarse) {
+    .btn, .filter-btn, .nav-menu a, .project-links a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .social-links a {
+        min-width: 48px;
+        min-height: 48px;
+    }
+}
+
+/* Accessibility: Support prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-image-container {
+        animation: none !important;
     }
 }
