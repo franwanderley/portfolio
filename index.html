@@ -68,6 +68,27 @@
         },
         {
           "@type": "CreativeWork",
+          "@id": "https://franwanderley.github.io/portfolio/#project-saolucas",
+          "name": "Clínica São Lucas",
+          "description": "Landing page médica profissional, otimizada para buscadores (SEO) e totalmente responsiva, desenvolvida com HTML, CSS e jQuery.",
+          "url": "https://clinicasaolucas.vercel.app",
+          "codeRepository": "https://github.com/franwanderley/clinicasaolucas",
+          "creator": {
+            "@id": "https://franwanderley.github.io/portfolio/#person"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://franwanderley.github.io/portfolio/#project-buffet-kid",
+          "name": "Alegria & Magia | Buffet Infantil",
+          "description": "Landing page moderna e de alta conversão para espaço de festas infantis com tour virtual pela infraestrutura, pacotes e solicitação ágil de orçamentos.",
+          "url": "https://buffet-kid.vercel.app/",
+          "creator": {
+            "@id": "https://franwanderley.github.io/portfolio/#person"
+          }
+        },
+        {
+          "@type": "CreativeWork",
           "@id": "https://franwanderley.github.io/portfolio/#project-6a3",
           "name": "6 a 3 | Simulador da Copa Libertadores",
           "description": "Simulador de torneio de futebol onde o usuário monta o elenco, ajusta a tática e simula as fases de grupos e eliminatórias.",
@@ -106,17 +127,6 @@
           "description": "Plataforma moderna de compartilhamento de ideias, fóruns e debates online em tempo real. Desenvolvido com React, Vite, Fastify, Prisma e Neon.",
           "url": "https://mindshare-five.vercel.app/",
           "codeRepository": "https://github.com/franwanderley/mindshare",
-          "creator": {
-            "@id": "https://franwanderley.github.io/portfolio/#person"
-          }
-        },
-        {
-          "@type": "CreativeWork",
-          "@id": "https://franwanderley.github.io/portfolio/#project-saolucas",
-          "name": "Clínica São Lucas",
-          "description": "Landing page médica profissional, otimizada para buscadores (SEO) e totalmente responsiva, desenvolvida com HTML, CSS e jQuery.",
-          "url": "https://clinicasaolucas.vercel.app",
-          "codeRepository": "https://github.com/franwanderley/clinicasaolucas",
           "creator": {
             "@id": "https://franwanderley.github.io/portfolio/#person"
           }
@@ -304,7 +314,6 @@
                 </div>
 
                 <div class="projects-grid">
-                    <!-- Project 1 -->
                     <div class="project-card" data-category="fullstack react java">
                         <div class="project-img-wrapper">
                             <img src="./img/kdminhaoficina.webp" alt="Site do KD minha oficina" width="800" height="405" loading="lazy">
@@ -325,8 +334,48 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                     <div class="project-card" data-category="frontend react">
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-img-wrapper">
+                            <img src="./img/notebook2.webp" alt="Landing Page Clínica São Lucas" width="800" height="395" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Clínica São Lucas</h3>
+                            <p>Landing page médica profissional, otimizada para buscadores (SEO) e totalmente responsiva, aumentando a conversão de pacientes da clínica. Desenvolvida com HTML, CSS e jQuery.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">HTML5</span>
+                                <span class="project-tech-tag">CSS3</span>
+                                <span class="project-tech-tag">jQuery</span>
+                                <span class="project-tech-tag">SEO</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/franwanderley/clinicasaolucas" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://clinicasaolucas.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-img-wrapper">
+                            <img src="./img/buffet-kid.png" alt="Landing Page Buffet Infantil Alegria e Magia" width="800" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Alegria & Magia | Buffet Infantil</h3>
+                            <p>Landing page moderna e de alta conversão para buffet infantil de alto padrão. Conta com apresentação da infraestrutura climatizada e brinquedoteca, pacotes de festas, cardápio artesanal, galeria interativa e solicitação rápida de orçamentos.</p>
+                            <div class="project-tech-tags">
+                                <span class="project-tech-tag">HTML5</span>
+                                <span class="project-tech-tag">CSS3</span>
+                                <span class="project-tech-tag">JavaScript</span>
+                                <span class="project-tech-tag">UX/UI</span>
+                                <span class="project-tech-tag">SEO</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="disabled" title="Projeto comercial privado"><i class="fab fa-github"></i> Privado</a>
+                                <a href="https://buffet-kid.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="frontend react">
                         <div class="project-img-wrapper">
                             <img src="./img/6a3.webp" alt="Jogo de simulação de partidas de futebol" width="400" height="213" loading="lazy">
                         </div>
@@ -347,7 +396,6 @@
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
                     <div class="project-card" data-category="fullstack react">
                         <div class="project-img-wrapper">
                             <img src="./img/capture-kanbam.webp" alt="Kanban de Tarefas" width="800" height="405" loading="lazy">
@@ -368,7 +416,6 @@
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
                     <div class="project-card" data-category="backend">
                         <div class="project-img-wrapper">
                             <img src="./img/resultado.webp" alt="Site APDPRH Certificados" width="800" height="450" loading="lazy">
@@ -388,8 +435,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 5 -->
-                    <div class="project-card" data-category="fullstack react">
+                    <div class="project-card project-hidden" data-category="fullstack react" hidden style="display: none !important;">
                         <div class="project-img-wrapper">
                             <img src="./img/mindshare-gif.webp" alt="Mindshare Plataforma" width="800" height="407" loading="lazy">
                         </div>
@@ -406,27 +452,6 @@
                             <div class="project-links">
                                 <a href="https://github.com/franwanderley/mindshare" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
                                 <a href="https://mindshare-five.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="project-card" data-category="frontend">
-                        <div class="project-img-wrapper">
-                            <img src="./img/notebook2.webp" alt="Landing Page Clínica São Lucas" width="800" height="395" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Clínica São Lucas</h3>
-                            <p>Landing page médica profissional, otimizada para buscadores (SEO) e totalmente responsiva, aumentando a conversão de pacientes da clínica. Desenvolvida com HTML, CSS e jQuery.</p>
-                            <div class="project-tech-tags">
-                                <span class="project-tech-tag">HTML5</span>
-                                <span class="project-tech-tag">CSS3</span>
-                                <span class="project-tech-tag">jQuery</span>
-                                <span class="project-tech-tag">SEO</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/franwanderley/clinicasaolucas" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                                <a href="https://clinicasaolucas.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Visitar</a>
                             </div>
                         </div>
                     </div>

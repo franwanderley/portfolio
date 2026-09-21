@@ -147,7 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
      5. PROJECTS DYNAMIC FILTERS
      ========================================================================== */
   const filterButtons = document.querySelectorAll(".filter-btn");
-  const projectCards = document.querySelectorAll(".project-card");
+  const projectCards = document.querySelectorAll(
+    ".project-card:not(.project-hidden):not([hidden])"
+  );
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
